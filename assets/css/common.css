@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+
+body,html{
+  font-size: 10px;}
+
+ul{
+  margin: 0;
+  padding: 0;}
+
+li{list-style: none;}
+
+a{
+  text-decoration: none;
+  color: #000;}
+
+.btn button{
+  width: 20rem;
+  height: 5rem;
+  background-color: #fff;
+  border: 1px solid #F05226;
+  border-radius: 10px;
+  color: #F05226;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn button:hover{
+  background-color: #F05226;
+  border: 1px solid #F05226;
+  color: #fff;
+}
+
+.container-wrap{
+  width: 100%;
+  max-width: 1484px;
+  margin: 0 auto;
+  padding: 0 3.2rem;}
+
+.container-fluid{
+  width: 100%;
+  margin: 0 auto;
+  padding: 8rem 0 ;}
+
+.container-wrap h2{
+  font-size: 4.2rem;
+  margin-bottom: 8rem;
+  text-align: center;}
+
+.container-wrap span{font-weight: 400;}
+
+/* Header */
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;}
+
+.navi .gnb{
+  display: flex;
+  align-items: center;}
+
+.navi .gnb li{
+  padding: 0 0 0 1.2rem;}
+
+.navi .gnb li a.gnb-link{
+  font-size: 2rem;
+  width: 13rem;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;}
+
+.call{
+  display: flex;
+  align-items: center;}
+
+.call .call-text{
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;}
+  
+.call .call-text li{font-size: 1.3rem;}
+
+.call .call-text li.number{
+  font-size: 2rem;
+  font-weight: bold;}
+
+.ghost{
+  /* display: none; */
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  display: none;}
+
+.ghost .button span{
+  width: 2.5rem;
+  height: 0.3rem;
+  border-radius: 0.5rem;
+  background: #000;
+  display: block;
+  margin-top: 0.5rem;
+  cursor: pointer;}
+
+.ghost .button span:first-child{
+  margin-top: 0;}
+
+.megamenu{
+  position: absolute;
+  z-index: 9;
+  top: 15rem; /* 유동적으로 설정할 것 */
+  padding: 0;
+  opacity: 0;
+  transition: all 0.5s;}
+
+.megamenu.active{opacity: 1;}
+
+.megamenu li{
+  padding-left: 0;
+  margin: 1rem 0rem;
+  transition: 0.2s;}
+
+.megamenu-bg{
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  top: 12rem;
+  height: 0;
+  width: 100%;
+  border-top: 1px solid #f7f7f7;
+  background-color: #fff;
+  box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 15%);
+  transition: all 0.5s;}
+
+.megamenu-bg.active{
+  height: 20rem;}
+
+.megamenu li a{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #666;
+  margin-bottom: 125rem;
+  height: inherit;}
+
+.megamenu li a:hover{
+  color: #F05226;
+  border-bottom: 2px solid #F05226;
+}
+
+/* Media Query */
+
+@media (max-width: 1260px) {
+  header{padding: 1.8rem 0;}
+  .navi{display: none;}
+  .ghost{display: block;}
+  .m-menu{display: flex; align-items: center;}
+  .call{margin-right: 4rem;} }
+
+@media (max-width: 768px) {
+  .logo img{width: 12rem;}
+  .call{display: none;} }
